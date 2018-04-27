@@ -1,0 +1,37 @@
+﻿<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.12.17/css/grapes.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.12.17/grapes.min.js"></script>
+</head>
+
+<div id="gjs"></div>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+  var editor = grapesjs.init({
+      container : '#gjs',
+      components: '<div class="txt-red"><input type="text" id="li-name" value="test" /></div>',
+      style: '.txt-red{color: red}',
+  });
+
+  var pnm = editor.Panels;
+  pnm.addButton('options', [ { id: 'save-database', className: 'fa fa-floppy-o', command: 'save-database', attributes: {title: 'Save to database'} } ])
+
+// Add the command
+editor.Commands.add('save-database', {
+    run: function(editor, sender) {
+	    console.log("123123");
+	  var InnerHtml =  editor.getHtml() + '<style>' + editor.getCss()  + '</style>' + '<script type="text/javascript" src="./app.js" />';
+      console.log("InnerHtml", InnerHtml);
+	    var customer = {Data :btoa(InnerHtml)};
+        $.ajax({
+            type: "POST",
+            data :JSON.stringify(customer),
+            url: "home/create",
+            contentType: "application/json"
+        });
+      sender && sender.set('active', 0); // turn off the button
+      editor.store();
+    }
+});
+</script>
+
+<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>

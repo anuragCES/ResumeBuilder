@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeBuilder", "ResumeBuilder\ResumeBuilder.csproj", "{BAB3B497-16BD-4561-808D-BE91024E9A38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeBuilder.Tests", "ResumeBuilder.Tests\ResumeBuilder.Tests.csproj", "{6B7A6E39-6D59-4C74-8051-79503F602F8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAB3B497-16BD-4561-808D-BE91024E9A38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB3B497-16BD-4561-808D-BE91024E9A38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB3B497-16BD-4561-808D-BE91024E9A38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB3B497-16BD-4561-808D-BE91024E9A38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B7A6E39-6D59-4C74-8051-79503F602F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B7A6E39-6D59-4C74-8051-79503F602F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B7A6E39-6D59-4C74-8051-79503F602F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B7A6E39-6D59-4C74-8051-79503F602F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
